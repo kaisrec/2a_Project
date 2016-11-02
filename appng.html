@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div data-ng-controller="MainCtr">
+    <ul>
+        <li data-ng-repeat="item in agences">
+         {{item.Nom}} <b> Agence  :</b> {{item.Agence}}
+        </li>
+    </ul>  
+  
+</div>
+</body>
+<script src="js/angular.min.js"></script>
+<script src="appng.js"></script>
+</html>
