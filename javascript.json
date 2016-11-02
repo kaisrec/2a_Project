@@ -1,0 +1,48 @@
+{
+        // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+        // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+        // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+        // Example:
+    "For Loop": {
+        "prefix": "forloop",
+        "body": [
+            "for (var ${index} = 0; ${index} < ${array}.length; ${index}++) {",
+            "\tvar ${element} = ${array}[${index}];",
+            "\t$0",
+            "}"
+        ],
+        "description": "For Loop"
+    },
+
+    //--------------------------------
+    //AngularJs snippet ng-Controller
+    //--------------------------------
+    "ng-ctrl": {
+        "prefix": "ng-ctrl",
+        "body": ["angular.module('myApp',[])\n\t.controller('MainCtrl',function($scope){\n\tthis.$1 = {$2};\n});"],
+        "description": "Angularjs Controller"
+        },
+
+    //--------------------------------
+    //AngularJs snippet ng-Directive 
+    //--------------------------------
+    "ng-dirctv":{
+        "prefix": "ng-dirctv",
+         "body":[
+                "directive('$1', function(){",
+                "\treturn {",
+                "\t// scope: {}, // {} = isolate, true = child, false/undefined = no change",
+                "\t// controller: function($scope, $element, $attrs, $transclude) {},",
+                "\t// restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment",
+                "\t// template: '',",
+                "\t// templateUrl: '',",
+                "\t// replace: true,",
+                "\t// transclude: true,",
+                "\tlink: function($scope, iElm, iAttrs, controller) {",	
+                "\t}",
+                "\t};",
+                "});"
+            ],
+         "description":"Angularjs Directive"
+        }
+}
