@@ -19,30 +19,61 @@
     //--------------------------------
     "ng-ctrl": {
         "prefix": "ng-ctrl",
-        "body": ["angular.module('myApp',[])\n\t.controller('MainCtrl',function($scope){\n\tthis.$1 = {$2};\n});"],
+        "body": ["angular.module('myApp',[])",
+                "\t.controller('MainCtrl',function(){",
+                "\tvar vm = this;",
+                "\tvm.$1;",
+                "\t});"
+                ],
         "description": "Angularjs Controller"
         },
 
-    //--------------------------------
+    //------------------------------------------------
     //AngularJs snippet ng-Directive 
-    //--------------------------------
-    "ng-dirctv":{
-        "prefix": "ng-dirctv",
-         "body":[
-                "directive('$1', function(){",
+    //------------------------------------------------
+    "ng-dctv":{
+        "prefix": "ng-dctv",
+         "body":["angular.module('myApp',[])",
+                "\t.directive('$1', function(){",
                 "\treturn {",
-                "\t// scope: {}, // {} = isolate, true = child, false/undefined = no change",
-                "\t// controller: function($scope, $element, $attrs, $transclude) {},",
-                "\t// restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment",
-                "\t// template: '',",
-                "\t// templateUrl: '',",
-                "\t// replace: true,",
+                "\t   replace: true,",
                 "\t// transclude: true,",
-                "\tlink: function($scope, iElm, iAttrs, controller) {",	
-                "\t}",
+                "\t// controller: function() {},",
+                "\t// controllerAs:",
+                "\t// bindToController: true,",
+                "\t   restrict:'E',",
+                "\t// scope: {},",
+                "\t   template: '',",
+                "\t// templateUrl: '',",
+                "\t// link: function(scope, elem, attr){}",
                 "\t};",
                 "});"
-            ],
+                ],
          "description":"Angularjs Directive"
+        },
+
+    //------------------------------------------------
+    //AngularJs snippet ng-Directive for Angularjs 1.4
+    //------------------------------------------------
+    "ng-vm":{
+        "prefix": "ng-vm",
+         "body":["angular.module('myApp',[])",
+                ".directive('phone', function () {",
+                "\t return {",
+                "\t\t scope: true,",
+                "\t\t bindToController: {name:'@'},",
+                "\t\t controller: function(){},",
+                "\t\t controllerAs: 'vm',",
+                "\t\t template: '<h3>{{vm.$1}}</h3>',",
+                "\t\t link: function(scope, elem, attr){",
+                "\t\t\t elem.on('click',function(){",
+                "\t\t\t console.log(scope.vm.$2)",
+                "\t\t\t })",
+                "\t\t }",
+                "\t\t };",
+                "\t });"
+                ],
+         "description":"Angularjs Directive with controllerAs "
         }
 }
+
